@@ -11,22 +11,24 @@ import "./Cart.scss";
 const Cart = () => {
     const { cartItems, setShowCart, cartSubTotal } = useContext(Context);
 
-    const stripePromise = loadStripe(
-        process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY
-    );
+    // const stripePromise = loadStripe(
+    //     "E438806FFE7B49C8B9908D47CB02E8B6"
+    // );
 
-    const handlePayment = async () => {
-        try {
-            const stripe = await stripePromise;
-            const res = await makePaymentRequest.post("/api/orders", {
-                products: cartItems,
-            });
-            await stripe.redirectToCheckout({
-                sessionId: res.data.stripeSession.id,
-            });
-        } catch (err) {
-            console.log(err);
-        }
+    const handlePayment =  {
+
+        alert:"your order is place"
+        // try {
+        //     const stripe = await stripePromise;
+        //     const res = await makePaymentRequest.post("/api/orders", {
+        //         products: cartItems,
+        //     });
+        //     await stripe.redirectToCheckout({
+        //         sessionId: res.data.stripeSession.id,
+        //     });
+        // } catch (err) {
+        //     console.log(err);
+        // }
     };
 
     return (
@@ -72,7 +74,7 @@ const Cart = () => {
                                     className="checkout-cta"
                                     onClick={handlePayment}
                                 >
-                                    Checkout
+                                    Checkout here
                                 </button>
                             </div>
                         </div>

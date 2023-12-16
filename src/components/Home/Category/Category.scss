@@ -4,13 +4,20 @@
     @include md {
         margin: 50px 0;
     }
+    .text-white{
+        color: #fff;
+        padding: 20px;
+
+    }
     .categories {
         display: flex;
         flex-flow: wrap;
         gap: 10px;
+       
         .category {
             background-color: black;
             width: calc(50% - 5px);
+            border-radius: 15px;
             cursor: pointer;
             overflow: hidden;
             @include md {
@@ -20,6 +27,9 @@
                 width: 100%;
                 display: block;
                 transition: all ease 0.3s;
+                object-fit: cover;
+                height: 300px;
+               
             }
             &:hover {
                 img {

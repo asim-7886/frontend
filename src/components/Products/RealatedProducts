@@ -1,0 +1,26 @@
+import "./Products.scss";
+import Product from "./Product/RelatedProducts.jsx";
+
+const RelatedProducts = ({ products, innerPage, headingText,image }) => {
+    return (
+        <div className="products-container">
+            {!innerPage && <div className="sec-heading">{headingText}</div>}
+           
+            <div className={`products ${innerPage ? "innerPage" : ""}`}>
+                {/* <img src={"http://192.168.0.12:1337" + image} alt="" width="300px" height="300px" /> */}
+                {products?.data?.map((item) => (
+                    // console.log(item.attributes)
+                    <Product
+                        key={item.id}
+                        id={item.id}
+                        data={item.attributes}
+                        img={item.attributes.img.data.attributes}
+
+                    />
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default RelatedProducts;

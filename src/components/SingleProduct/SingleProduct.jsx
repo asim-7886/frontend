@@ -31,17 +31,21 @@ const SingleProduct = () => {
 
     if (!data) return;
     const product = data?.data?.[0]?.attributes;
+    // console.log(product);
 
     return (
         <div className="single-product-main-content">
             <div className="layout">
                 <div className="single-product-page">
                     <div className="left">
-                        <img
-                            src={
-                                process.env.REACT_APP_STRIPE_APP_DEV_URL +
-                                product.image.data[0].attributes.url
-                            }
+                        <img alt="img"  
+                              
+                                src={
+                                   
+
+                                        "http://192.168.0.12:1337" + product.img.data[0].attributes.url
+                                      }
+                                
                         />
                     </div>
                     <div className="right">
@@ -93,7 +97,8 @@ const SingleProduct = () => {
                 </div>
                 <RelatedProducts
                     productId={id}
-                    categoryId={product.categories.data[0].id}
+
+                    img={product.img.data[0].attributes.url}
                 />
             </div>
         </div>
