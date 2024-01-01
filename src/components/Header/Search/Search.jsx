@@ -54,7 +54,7 @@ const Search = ({ setSearchModal }) => {
                             <div className="image-container">
                                 <img alt="img"
                                     src={
-                                        "http://192.168.0.12:1337" +
+                                        "http://localhost:1337" +
                                             item.attributes.img.data[0].attributes.url
                                     }
                                 />

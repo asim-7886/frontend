@@ -43,7 +43,7 @@ const SingleProduct = () => {
                                 src={
                                    
 
-                                        "http://192.168.0.12:1337" + product.img.data[0].attributes.url
+                                        "http://localhost:1337" + product.img.data[0].attributes.url
                                       }
                                 
                         />

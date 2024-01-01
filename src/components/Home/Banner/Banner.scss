@@ -57,9 +57,9 @@
                 line-height: 1;
                 color: white;
                 margin-bottom: 20px;
-                @include md {
-                    font-size: 180px;
-                }
+                // @include md {
+                //     font-size: 180px;
+                // }
             }
             p {
                 max-width: 300px;

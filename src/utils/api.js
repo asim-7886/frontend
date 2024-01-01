@@ -9,7 +9,7 @@ const params = {
 export const fetchDataFromApi = async (url) => {
     try {
         const { data } = await axios.get(
-           'http://192.168.0.12:1337' + url,
+           'http://localhost:1337' + url,
             params
             
         );
@@ -23,7 +23,7 @@ export const fetchDataFromApi = async (url) => {
 };
 
 export const makePaymentRequest = axios.create({
-    baseURL:  'http://192.168.0.12:1337',
+    baseURL:  'http://localhost:1337',
     headers: {
         Authorization: "bearer " + "E438806FFE7B49C8B9908D47CB02E8B6"
     },

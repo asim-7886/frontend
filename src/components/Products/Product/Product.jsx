@@ -12,7 +12,7 @@ const Product = ({ data, id, }) => {
             <div className="thumbnail">
                 <img alt='img'
                 
-                    src={"http://192.168.0.12:1337" + data.img.data[0].attributes.url }
+                    src={"http://localhost:1337" + data.img.data[0].attributes.url }
                 />
             </div>
             <div className="prod-details">

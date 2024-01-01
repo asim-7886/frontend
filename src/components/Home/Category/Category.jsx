@@ -15,7 +15,7 @@ const Category = ({ categories }) => {
             <img
               alt="img"
               src={
-                "http://192.168.0.12:1337"+
+                "http://localhost:1337"+
                 item.attributes.img.data.attributes.url
               }
             />

@@ -30,10 +30,10 @@
             outline: none;
             border: none;
             text-transform: uppercase;
-            @include md {
-                height: 80px;
-                font-size: 48px;
-            }
+            // @include md {
+            //     height: 80px;
+            //     font-size: 48px;
+            // }
             &::placeholder {
                 color: #212121;
             }
