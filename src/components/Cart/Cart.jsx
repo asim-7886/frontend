@@ -9,7 +9,7 @@ import CartItem from "./CartItem/CartItem";
 import "./Cart.scss";
 
 const Cart = () => {
-    const { cartItems, setShowCart, cartSubTotal } = useContext(Context);
+    const { cartItems, setShowCart, cartSubTotal, } = useContext(Context);
 
 
     const navigate = useNavigate();
@@ -37,7 +37,7 @@ const Cart = () => {
                     <div className="empty-cart">
                         <BsCartX />
                         <span>No products in the cart.</span>
-                        <button className="return-cta" onClick={() => {}}>
+                        <button className="return-cta"  onClick={() => navigate("/")}>
                             RETURN TO SHOP
                         </button>
                     </div>
@@ -50,7 +50,7 @@ const Cart = () => {
                             <div className="subtotal">
                                 <span className="text">Subtotal:</span>
                                 <span className="text total">
-                                    &#8377;{cartSubTotal}
+                                    RS: {cartSubTotal}
                                 </span>
                             </div>
                             <div className="button">

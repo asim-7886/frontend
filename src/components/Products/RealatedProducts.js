@@ -7,7 +7,7 @@ const RelatedProducts = ({ products, innerPage, headingText,image }) => {
             {!innerPage && <div className="sec-heading">{headingText}</div>}
            
             <div className={`products ${innerPage ? "innerPage" : ""}`}>
-                {/* <img src={"http://localhost:1337" + image} alt="" width="300px" height="300px" /> */}
+                {/* <img src={"process.env.REACT_APP_STRIPE_APP_DEV_URL" + image} alt="" width="300px" height="300px" /> */}
                 {products?.data?.map((item) => (
                     // console.log(item.attributes)
                     <Product

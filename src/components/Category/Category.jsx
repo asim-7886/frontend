@@ -4,7 +4,9 @@ import Products from "../Products/Products";
 import "./Category.scss";
 const Category = () => {
     const { id } = useParams();
-    const { data } = useFetch( `/api/products?populate=*&[filters][categories][id]=${id}` );
+    const { data } = useFetch(
+        `/api/products?populate=*&[filters][categories][id]=${id}`
+    );
     return (
         <div className="category-main-content">
             <div className="layout">

@@ -15,13 +15,13 @@ const Category = ({ categories }) => {
             <img
               alt="img"
               src={
-                "http://localhost:1337"+
+                "https://1372-103-150-207-38.ngrok-free.app"+
                 item.attributes.img.data.attributes.url
               }
             />
             <span className="name text-white">{  
             
-                item.attributes.title + ' Laptop'
+                item.attributes.title 
                 }</span>
           </div>
         ))}

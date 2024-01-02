@@ -12,12 +12,12 @@ const Product = ({ data, id, }) => {
             <div className="thumbnail">
                 <img alt='img'
                 
-                    src={"http://localhost:1337" + data.img.data[0].attributes.url }
+                    src={"https://1372-103-150-207-38.ngrok-free.app" + data.img.data[0].attributes.url }
                 />
             </div>
             <div className="prod-details">
                 <span className="name">{data.title}</span>
-                <span className="price">&#8377;{data.price}</span>
+                <span className="price">Rs: {data.price}</span>
             </div>
         </div>
     );

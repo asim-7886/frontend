@@ -11,11 +11,12 @@
             max-width: 1200px;
         }
     }
+    
     .category-title {
         font-size: 24px;
-        @include md {
-            font-size: 34px;
-        }
+        // @include md {
+        //     font-size: 34px;
+        // }
     }
     .products-container {
         margin: 20px 0;

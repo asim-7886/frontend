@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "submit_forms",
+  "info": {
+    "singularName": "submit-form",
+    "pluralName": "submit-forms",
+    "displayName": "submit-form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "text"
+    },
+    "address2": {
+      "type": "text"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "integer"
+    },
+    "cardholder": {
+      "type": "string"
+    },
+    "cardnumber": {
+      "type": "biginteger"
+    },
+    "expiredate": {
+      "type": "string"
+    },
+    "cvv": {
+      "type": "integer"
+    }
+  }
+}

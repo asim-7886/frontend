@@ -751,6 +751,47 @@ export interface ApiProductProduct extends Schema.CollectionType {
   };
 }
 
+export interface ApiSubmitFormSubmitForm extends Schema.CollectionType {
+  collectionName: 'submit_forms';
+  info: {
+    singularName: 'submit-form';
+    pluralName: 'submit-forms';
+    displayName: 'submit-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    firstName: Attribute.String;
+    lastName: Attribute.String;
+    email: Attribute.Email;
+    address: Attribute.Text;
+    address2: Attribute.Text;
+    country: Attribute.String;
+    state: Attribute.String;
+    zip: Attribute.Integer;
+    cardholder: Attribute.String;
+    cardnumber: Attribute.BigInteger;
+    expiredate: Attribute.String;
+    cvv: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::submit-form.submit-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::submit-form.submit-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -769,6 +810,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::category.category': ApiCategoryCategory;
       'api::product.product': ApiProductProduct;
+      'api::submit-form.submit-form': ApiSubmitFormSubmitForm;
     }
   }
 }

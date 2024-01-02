@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Banner.scss";
-import BannerImg from "../../../assets/laptop.png";
+import BannerImg from "../../../assets/banner-img.webp";
 
 const Banner = () => {
     const navigate = useNavigate();
     return (
         <div className="hero-banner">
             <div className="content">
-                <div className="text-content">
+                {/* <div className="text-content">
                     <h1>SALES</h1>
                     <p>
                         Convallis interdum purus adipiscing dis parturient
@@ -19,8 +19,8 @@ const Banner = () => {
                         <div className="banner-cta" onClick={() => navigate("/about")}>Read More</div>
                         <div className="banner-cta v2">Shop Now</div>
                     </div>
-                </div>
-                <img className="banner-img" src={BannerImg} alt="img" />
+                </div> */}
+                {/* <img className="banner-img" src={BannerImg} alt="img" /> */}
             </div>
         </div>
     );

@@ -19,7 +19,7 @@ const CartItem = () => {
                         <img alt="img"
                             src={
                                 
-                                "http://localhost:1337" +
+                                "https://1372-103-150-207-38.ngrok-free.app" +
                                 item.attributes.img.data[0].attributes.url
                             }
                         />
@@ -51,7 +51,7 @@ const CartItem = () => {
                             <span>{item.attributes.quantity}</span>
                             <span>x</span>
                             <span className="highlight">
-                                <span>&#8377;</span>
+                                <span>RS: </span>
                                 {item.attributes.price *
                                     item.attributes.quantity}
                             </span>

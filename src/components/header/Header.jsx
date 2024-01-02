@@ -30,7 +30,7 @@ const Header = () => {
     return (
         <>
             <header
-                className={`main-header ${scrolled ? "sticky-header" : ""}`}
+                className={`main-header ${scrolled ? "sticky-header" : ""} bg-info`}
             >
                 <div className="header-content">
                     <ul className="left">

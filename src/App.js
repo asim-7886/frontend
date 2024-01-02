@@ -9,7 +9,7 @@ import Category from "./components/Category/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import Newsletter from "./components/Footer/Newsletter/Newsletter";
 import AppContext from "./utils/context";
-import { Checkbox } from "@mui/material";
+// import { Checkbox } from "@mui/material";
 
 function App() {
     return (
@@ -23,7 +23,7 @@ function App() {
                     <Route path="/checkout" element={<CheckOut />} />
                     <Route path="/product/:id" element={<SingleProduct  />} />
                 </Routes>
-                <Newsletter />
+                {/* <Newsletter /> */}
                 <Footer />
             </AppContext>
         </BrowserRouter>

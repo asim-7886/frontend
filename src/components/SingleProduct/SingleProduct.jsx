@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Context } from "../../utils/context";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
-import RelatedProducts from "./RelatedProducts/RelatedProducts";
+// import RelatedProducts from "./RelatedProducts/RelatedProducts";
 import {
     FaFacebookF,
     FaTwitter,
@@ -12,6 +12,7 @@ import {
     FaCartPlus,
 } from "react-icons/fa";
 import "./SingleProduct.scss";
+// import Category from "../Category/Category";
 
 const SingleProduct = () => {
     const [quantity, setQuantity] = useState(1);
@@ -40,17 +41,13 @@ const SingleProduct = () => {
                     <div className="left">
                         <img alt="img"  
                               
-                                src={
-                                   
-
-                                        "http://localhost:1337" + product.img.data[0].attributes.url
-                                      }
+                                src={ "process.env.REACT_APP_STRIPE_APP_DEV_URL" + product.img.data[0].attributes.url}
                                 
                         />
                     </div>
                     <div className="right">
                         <span className="name">{product.title}</span>
-                        <span className="price">&#8377;{product.price}</span>
+                        <span className="price">Rs: {product.price}</span>
                         <span className="desc">{product.description}</span>
 
                         <div className="cart-buttons">
@@ -74,6 +71,7 @@ const SingleProduct = () => {
                         <span className="divider" />
                         <div className="info-item">
                             <span className="text-bold">
+                              
                                 Category:{" "}
                                 <span>
                                     {
@@ -95,11 +93,8 @@ const SingleProduct = () => {
                         </div>
                     </div>
                 </div>
-                <RelatedProducts
-                    productId={id}
-
-                    img={product.img.data[0].attributes.url}
-                />
+                {console.log(product)}
+                
             </div>
         </div>
     );

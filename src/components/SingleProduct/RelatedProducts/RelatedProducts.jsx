@@ -13,7 +13,7 @@ const RelatedProducts = ({ img, productId, products,image }) => {
             
             {/* {img.map((item) => (
                     // console.log(item.attributes) */}
-                    <img alt="img"  src={"http://localhost:1337" + img } height="300px" width="300px"/>
+                    <img alt="img"  src={"process.env.REACT_APP_STRIPE_APP_DEV_URL" + img } height="300px" width="300px"/>
                 {/* ))} */}
 
 
